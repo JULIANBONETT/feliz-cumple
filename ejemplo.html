@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños!</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRcqYCd3GiJD7U14qZOhXbqpXd7TAc9-Araw&s" type="image/x-icon">
+    <style>
+        body {
+            background-image: url('https://media.istockphoto.com/id/1495576954/es/foto/fondo-bokeh-abstracto-de-luces-brillantes-de-colores-con-enfoque-suave-a-la-luz-del-sol.webp?b=1&s=170667a&w=0&k=20&c=TLqgepwGfRYIIm5MwOLzUMSuXGVlgRjJ8nxiOMVyTto=');
+            background-size: cover;
+            text-align: center;
+            color: rgb(14, 13, 13);
+            font-family: 'Arial', sans-serif;
+        }
+        .content {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+        }
+        .buttons {
+            margin: 20px;
+        }
+        .buttons button {
+            background-color: #ee0909;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+            color: white;
+        }
+        .buttons button:hover {
+            background-color: #f90808;
+        }
+        .images img {
+            width: 300px;
+            height: auto;
+            margin: 20px;
+            border-radius: 20px;
+        }
+        .video-link {
+            display: block;
+            margin: 20px;
+            font-size: 1.5em;
+            color: #f30d0d;
+            text-decoration: none;
+        }
+        .video-link:hover {
+            color: #000000;
+        }
+        .hidden {
+            display: none;
+        }
+        .message {
+            font-size: 2em;
+            margin-top: 50px;
+        }
+        .back-button {
+            background-color: #e11717;
+            border: none;
+            padding: 10px 20px;
+            margin: 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 10px;
+            color: rgba(0, 0, 0, 0.838);
+        }
+        .back-button:hover {
+            background-color: #f6f6f6;
+        }
+    </style>
+</head>
+<body>
+    <div class="content" id="main-content">
+        <h1><th><font color="red">¡Feliz Cumpleaños!</font></th></h1>
+        
+        <div class="buttons">
+            <button onclick="showMessage('¡Feliz cumpleaños! Que este día especial esté repleto de amor, alegría y risas. Que cada momento sea tan maravilloso como tú y que todos tus sueños se hagan realidad. Hoy celebramos no solo tu cumpleaños, sino también la increíble persona que eres. ¡Te deseo un año lleno de bendiciones y felicidad infinita! 🎂🎉💖')">¡Felicitaciones!</button>
+            <button onclick="showMessage('¡Feliz cumpleaños! En este día especial, quiero recordarte lo increíblemente fuerte y valiente que eres. Has superado muchos desafíos y cada uno de ellos te ha hecho más sabio y más fuerte. Que este nuevo año de vida te brinde nuevas oportunidades y la energía para seguir persiguiendo tus sueños con la misma pasión y determinación. Nunca dejes de creer en ti mismo, porque tienes el poder de lograr todo lo que te propongas. ¡Adelante siempre! 🎉🌟💪')">¡Felicitaciones!</button>
+            <button onclick="showMessage('¡Feliz cumpleaños, querido amigo! En este día especial, queremos recordarte lo increíble que eres y lo agradecidos que estamos por tenerte en nuestras vidas. Has demostrado una fuerza y una valentía admirables, y estamos seguros de que seguirás alcanzando grandes logros. Que este nuevo año te traiga muchas oportunidades para crecer y brillar aún más. Sigue adelante con esa determinación y pasión que te caracteriza. ¡Estamos aquí para apoyarte siempre! ¡Celebremos tu día y todos los maravillosos momentos que vendrán! 🎂🎉🌟')">¡Felicitaciones!</button>
+        </div>
+        <div class="images">
+            <img src="https://static.vecteezy.com/system/resources/previews/015/678/164/original/lettering-feliz-cumpleanos-in-spanish-which-means-happy-birthday-free-vector.jpg" alt="Imagen de cumpleaños 1">
+            <img src="https://papertacos.com/cdn/shop/products/V35968_1.png?v=1673677630" alt="Imagen de cumpleaños 2">
+            <img src="https://cdn.pensador.com/es/imagenes/que-en-este-dia-sonrias-desde-que-te-levantes-hasta-que-te-acuestes-feliz-cumpleanos.jpg" alt="Imagen de cumpleaños 3">
+        </div>
+        <a class="video-link" href="https://youtu.be/YJ84U_30GRM" target="_blank">¡Haz clic aquí para ver un video de cumpleaños!</a>
+    </div>
+    <div class="content hidden" id="message-content">
+        <h1><th><font color="red">¡Feliz Cumpleaños!</font></th></h1>
+        <div class="message" id="message-text"></div>
+        <button class="back-button" onclick="goBack()">Volver</button>
+    </div>
+    <script>
+        function showMessage(message) {
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('message-text').innerText = message;
+            document.getElementById('message-content').classList.remove('hidden');
+        }
+        function goBack() {
+            document.getElementById('message-content').classList.add('hidden');
+            document.getElementById('main-content').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
