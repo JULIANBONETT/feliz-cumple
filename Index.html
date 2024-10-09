@@ -82,31 +82,8 @@
             top: 0;
         }
 
-        #photo-upload {
-            border: 2px dashed #ff69b4;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            display: inline-block;
-            width: 100%;
-            background-color: rgba(255, 182, 193, 0.2);
-            animation: fadeIn 3s ease-in-out;
-        }
-
-        label {
-            background-color: #ff69b4;
-            color: #fff;
-            padding: 12px 25px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
         #photo-preview {
             margin-top: 20px;
-            display: none;
             animation: fadeIn 1s ease-in-out;
         }
 
@@ -155,35 +132,12 @@
         <h1>¡Feliz Cumpleaños!</h1>
         <p>Que tu día esté lleno de sonrisas, abrazos y todo el amor que te mereces. ¡Disfruta cada momento!</p>
 
-        <div id="photo-upload">
-            <p>Sube una foto de este día tan especial:</p>
-            <label for="file-input">Subir Foto</label>
-            <input id="file-input" type="file" accept="image/*" onchange="previewPhoto()" style="display: none;">
+        <!-- Aquí se muestra la foto predeterminada -->
+        <div id="photo-preview">
+            <img src="https://example.com/tu-foto.jpg" alt="Foto de cumpleaños">
         </div>
-
-        <div id="photo-preview"></div>
 
         <footer>Con todo mi amor para ti, que seas siempre muy feliz. 💖</footer>
     </div>
-
-    <script>
-        function previewPhoto() {
-            const fileInput = document.getElementById('file-input');
-            const preview = document.getElementById('photo-preview');
-            const file = fileInput.files[0];
-
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    preview.style.display = 'block';
-                    preview.innerHTML = '<img src="' + e.target.result + '" alt="Foto de cumpleaños">';
-                };
-                reader.readAsDataURL(file);
-            } else {
-                preview.style.display = 'none';
-                preview.innerHTML = '';
-            }
-        }
-    </script>
 </body>
 </html>
