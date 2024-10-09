@@ -103,6 +103,52 @@
             animation: slideUp 2s ease-out;
         }
 
+        .button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff4081;
+        }
+
+        /* Página secundaria */
+        .hidden {
+            display: none;
+        }
+
+        .message {
+            margin-top: 40px;
+        }
+
+        .photo-top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo-bottom-left {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
         /* Animations */
         @keyframes float {
             0% { transform: translateY(0) rotate(-45deg); }
@@ -122,7 +168,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="page1">
         <div class="hearts">
             <div class="heart"></div>
             <div class="heart"></div>
@@ -132,12 +178,39 @@
         <h1>¡Feliz Cumpleaños!</h1>
         <p>Que tu día esté lleno de sonrisas, abrazos y todo el amor que te mereces. ¡Disfruta cada momento!</p>
 
-        <!-- Aquí se muestra la foto predeterminada -->
         <div id="photo-preview">
             <img src="https://example.com/tu-foto.jpg" alt="Foto de cumpleaños">
         </div>
 
+        <button class="button" onclick="showMessage()">¡Haz clic para más sorpresas!</button>
+
         <footer>Con todo mi amor para ti, que seas siempre muy feliz. 💖</footer>
     </div>
+
+    <!-- Segunda pantalla -->
+    <div class="container hidden" id="page2">
+        <div class="hearts">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+
+        <h1>Un Mensaje Especial</h1>
+        <p class="message">¡Eres una persona increíble y estoy muy agradecido(a) de tenerte en mi vida! 💕</p>
+
+        <!-- Imágenes en la esquina superior derecha y la inferior izquierda -->
+        <img src="https://example.com/imagen1.jpg" alt="Imagen derecha" class="photo-top-right">
+        <img src="https://example.com/imagen2.jpg" alt="Imagen izquierda" class="photo-bottom-left">
+
+        <footer>Con amor y felicidad, siempre a tu lado. 💖</footer>
+    </div>
+
+    <script>
+        function showMessage() {
+            // Ocultar la primera página y mostrar la segunda
+            document.getElementById('page1').classList.add('hidden');
+            document.getElementById('page2').classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
