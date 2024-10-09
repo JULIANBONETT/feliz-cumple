@@ -15,8 +15,8 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            position: relative; /* Para las imágenes fuera del contenedor */
-            overflow: hidden; /* Asegura que las imágenes no salgan del viewport */
+            position: relative;
+            overflow: hidden;
         }
 
         .container {
@@ -28,6 +28,7 @@
             width: 100%;
             max-width: 700px;
             position: relative;
+            z-index: 1;
         }
 
         h1 {
@@ -122,47 +123,56 @@
             background-color: #5312A8;
         }
 
-        /* Página secundaria */
+        /* Ocultar la segunda página por defecto */
         .hidden {
             display: none;
         }
 
-        .message {
-            margin-top: 40px;
-        }
-
-        /* Estilo de las fotos desordenadas */
-        .photo-disordered {
+        /* Imágenes organizadas fuera del cuadro */
+        .photo-ordered {
             position: absolute;
-            width: 120px;
-            height: 120px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transform: rotate(-15deg); /* Inclinación inicial */
+            width: 125px;
+            height: 125px;
+            border-radius: 10px;
+            box-shadow: 0 20px 5px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
         }
 
+        /* Posiciones fuera del cuadro */
         .photo-1 {
-            top: -50px;
-            left: -60px;
-            transform: rotate(-20deg); /* Rotación */
+            top: -150px;  /* Aumentar separación hacia arriba */
+            left: -150px; /* Aumentar separación hacia la izquierda */
+            transform: rotate(-5deg);
         }
 
         .photo-2 {
-            top: -40px;
-            right: -70px;
-            transform: rotate(10deg);
+            top: -150px;  /* Aumentar separación hacia arriba */
+            right: -150px; /* Aumentar separación hacia la derecha */
+            transform: rotate(5deg);
         }
 
         .photo-3 {
-            bottom: -80px;
-            left: -50px;
-            transform: rotate(25deg);
+            bottom: -120px; /* Aumentar separación hacia abajo */
+            left: -120px;  /* Aumentar separación hacia la izquierda */
+            transform: rotate(5deg);
         }
 
         .photo-4 {
-            bottom: -90px;
-            right: -60px;
-            transform: rotate(-10deg);
+            bottom: -120px; /* Aumentar separación hacia abajo */
+            right: -120px; /* Aumentar separación hacia la derecha */
+            transform: rotate(-5deg);
+        }
+
+        .photo-5 {
+            top: 100px;   /* Aumentar separación */
+            right: -220px; /* Aumentar separación */
+            transform: rotate(-5deg);
+        }
+
+        .photo-6 {
+            bottom: 100px; /* Aumentar separación */
+            left: -220px; /* Aumentar separación */
+            transform: rotate(5deg);
         }
 
         /* Animations */
@@ -184,6 +194,7 @@
     </style>
 </head>
 <body>
+    <!-- Primera pantalla -->
     <div class="container" id="page1">
         <div class="hearts">
             <div class="heart"></div>
@@ -203,11 +214,27 @@
         <footer>Con todo mi amor para ti, que seas siempre muy feliz. 💖</footer>
     </div>
 
-    <!-- Fotos desordenadas alrededor del contenedor -->
-    <img src="https://example.com/foto1.jpg" alt="Foto desordenada 1" class="photo-disordered photo-1">
-    <img src="https://example.com/foto2.jpg" alt="Foto desordenada 2" class="photo-disordered photo-2">
-    <img src="https://example.com/foto3.jpg" alt="Foto desordenada 3" class="photo-disordered photo-3">
-    <img src="https://example.com/foto4.jpg" alt="Foto desordenada 4" class="photo-disordered photo-4">
+    <!-- Segunda pantalla (oculta por defecto) -->
+    <div class="container hidden" id="page2">
+        <div class="hearts">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+
+        <h1>Un Mensaje Especial</h1>
+        <p>¡Eres una persona increíble y estoy muy agradecido(a) de tenerte en mi vida! 💕</p>
+
+        <!-- Imágenes ordenadas fuera del cuadro en la segunda página -->
+        <img src="https://github.com/JULIANBONETT/feliz-cumple/blob/main/WhatsApp%20Image%2020-10-09%20at%201.37.44%20PM.jpeg?raw=true" alt="Foto 1" class="photo-ordered photo-1">
+        <img src="https://github.com/JULIANBONETT/feliz-cumple/blob/main/WhatsApp%20Image%204-10-09%20at%202.35.16%20PM.jpeg?raw=true" alt="Foto 2" class="photo-ordered photo-2">
+        <img src="https://github.com/JULIANBONETT/feliz-cumple/blob/main/WhatsApp%20Image%20210-09%20at%201.38.27%20PM.jpeg?raw=true" alt="Foto 3" class="photo-ordered photo-3">
+        <img src="https://github.com/JULIANBONETT/feliz-cumple/blob/main/WhatsApp%20Image%20202-10-09%20at%202.35.15%20PM.jpeg?raw=true" alt="Foto 4" class="photo-ordered photo-4">
+        <img src="https://github.com/JULIANBONETT/feliz-cumple/blob/main/WhatsApp%20Image%202-10-09%20at%201.38.47%20PM.jpeg?raw=true" alt="Foto 5" class="photo-ordered photo-5">
+        <img src="https://github.com/JULIANBONETT/feliz-cumple/blob/main/WhatsApp%20Image%202010-09%20at%202.13.19%20PM.jpeg?raw=true" alt="Foto 6" class="photo-ordered photo-6">
+        
+        <footer>Con amor y felicidad, siempre a tu lado. 💖</footer>
+    </div>
 
     <script>
         function showMessage() {
