@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Feliz Cumpleaños!</title>
-    <link rel="icon" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsacher.com.mx%2Fblog%2Fpost%2Fpastel%2520de%2520chocolate%2520y%2520naranja&psig=AOvVaw0kyHOY1jwcmVo_3L5n9Hsi&ust=1728604637604000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPD0ip3AgokDFQAAAAAdAAAAABAJ" <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRcqYCd3GiJD7U14qZOhXbqpXd7TAc9-Araw&s" type="image/x-icon">>
+    <title>¡SORPRESA!</title>
+    <link rel="icon" href="https://sacher.com.mx/media/magefan_blog/pastelin.jpg" type="image/x-icon">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap');
@@ -42,11 +42,26 @@
             animation: fadeIn 2s ease-in-out;
         }
 
-        p {
+        .scroll-text {
             font-size: 1.4rem;
             margin-bottom: 20px;
             color: #444;
             animation: slideUp 2s ease-out;
+            max-height: 200px;
+            overflow-y: auto;
+            padding-right: 10px; /* Agrega espacio para la barra de desplazamiento */
+            text-align: left; /* Justificación del texto */
+            line-height: 1.6;
+            scrollbar-width: thin; /* Para hacer la barra de desplazamiento más delgada */
+        }
+
+        .scroll-text::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scroll-text::-webkit-scrollbar-thumb {
+            background-color: #5312A8;
+            border-radius: 10px;
         }
 
         .hearts {
@@ -87,16 +102,51 @@
             top: 0;
         }
 
-        #photo-preview {
-            margin-top: 20px;
-            animation: fadeIn 1s ease-in-out;
+        /* Imágenes organizadas fuera del cuadro */
+        .photo-ordered {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 0 20px 5px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        /* Posiciones fuera del cuadro */
+        .photo-1 {
+            top: -118px;
+            left: -218px;
+            transform: rotate(-10deg);
+        }
+
+        .photo-2 {
+            top: -118px;
+            right: -205px;
+            transform: rotate(5deg);
+        }
+
+        .photo-3 {
+            bottom: -100px;
+            left: -180px;
+            transform: rotate(5deg);
+        }
+
+        .photo-4 {
+            bottom: -80px;
+            right: -200px;
+            transform: rotate(-5deg);
+        }
+
+        .photo-5 {
+            top: 95px;
+            right: -200px;
+            transform: rotate(-5deg);
+        }
+
+        .photo-6 {
+            bottom: 130px;
+            left: -200px;
+            transform: rotate(5deg);
         }
 
         footer {
@@ -130,54 +180,6 @@
             display: none;
         }
 
-        /* Imágenes organizadas fuera del cuadro */
-        .photo-ordered {
-            position: absolute;
-            width: 125px;
-            height: 125px;
-            border-radius: 10px;
-            box-shadow: 0 20px 5px rgba(0, 0, 0, 0.2);
-            object-fit: cover;
-        }
-
-        /* Posiciones fuera del cuadro */
-        .photo-1 {
-            top: -150px;  /* Aumentar separación hacia arriba */
-            left: -150px; /* Aumentar separación hacia la izquierda */
-            transform: rotate(-5deg);
-        }
-
-        .photo-2 {
-            top: -150px;  /* Aumentar separación hacia arriba */
-            right: -150px; /* Aumentar separación hacia la derecha */
-            transform: rotate(5deg);
-        }
-
-        .photo-3 {
-            bottom: -120px; /* Aumentar separación hacia abajo */
-            left: -120px;  /* Aumentar separación hacia la izquierda */
-            transform: rotate(5deg);
-        }
-
-        .photo-4 {
-            bottom: -120px; /* Aumentar separación hacia abajo */
-            right: -120px; /* Aumentar separación hacia la derecha */
-            transform: rotate(-5deg);
-        }
-
-        .photo-5 {
-            top: 100px;   /* Aumentar separación */
-            right: -220px; /* Aumentar separación */
-            transform: rotate(-5deg);
-        }
-
-        .photo-6 {
-            bottom: 100px; /* Aumentar separación */
-            left: -220px; /* Aumentar separación */
-            transform: rotate(5deg);
-        }
-
-        /* Animations */
         @keyframes float {
             0% { transform: translateY(0) rotate(-45deg); }
             50% { transform: translateY(-15px) rotate(-45deg); }
@@ -205,18 +207,18 @@
         </div>
 
         <h1>¡Feliz Cumpleaños!</h1>
-        <p>Que tu día esté lleno de sonrisas, abrazos y todo el amor que te mereces. ¡Disfruta cada momento!</p>
+        <p>SÉ QUE NO ES ALGO SÚPER WOW, PERO LO HICE CON MUCHO CARIÑO, AMOR Y TAMBIÉN CON SUEÑO JAJAJAJA. ES ALGO QUE NUNCA HE HECHO Y QUERÍA HACERLO CONTIGO, ALGO ÚNICO Y ESPECIAL, AL MENOS PARA MÍ. TE AMO MUCHO</p>
 
-        <div id="photo-preview">
-            <img src="https://example.com/tu-foto.jpg" alt="Foto de cumpleaños">
-        </div>
-
+        <!-- Imágenes organizadas fuera del cuadro en la primera página -->
+        <img src="https://github.com/JULIANBONETT/feliz-cumple/blob/main/WhatsApp%20Image%202024-10-09%20at%207.12.06%20PM.jpeg?raw=true" alt="Foto 1" class="photo-ordered photo-1">
+        <img src="https://github.com/JULIANBONETT/feliz-cumple/blob/main/WhatsApp%20Image%202024-10-09%20at%207.13.20%20PM.jpeg?raw=true" alt="Foto 2" class="photo-ordered photo-2">
+       
         <button class="button" onclick="showMessage()">¡TOCA AQUI MI VIDA!</button>
 
-        <footer>Con todo mi amor para ti, que seas siempre muy feliz. 💖</footer>
+        <footer>Con todo mi amor para ti.💖</footer>
     </div>
 
-    <!-- Segunda pantalla (oculta por defecto) -->
+    <!-- Segunda pantalla (con las mismas fotos que en la primera página) -->
     <div class="container hidden" id="page2">
         <div class="hearts">
             <div class="heart"></div>
@@ -224,10 +226,27 @@
             <div class="heart"></div>
         </div>
 
-        <h1>Un Mensaje Especial</h1>
-        <p>¡Eres una persona increíble y estoy muy agradecido(a) de tenerte en mi vida! 💕</p>
+        <h1>TE AMO MI REINA</h1>
+        <div class="scroll-text">
+            <p>¡Hola, mi amor! 💖
 
-        <!-- Imágenes ordenadas fuera del cuadro en la segunda página -->
+                Vengo a desearte un muy feliz cumpleaños y recordarte cuánto te amo. Espero de corazón que la pases increíble hoy. Sé que esto no es la gran cosa, y bueno, te mentí un poquito sobre las capturas jajaja, pero no quería que descubrieras la sorpresa antes de tiempo. He estado algo distraído, trabajando en esto para ti, porque quería regalarte algo especial.
+                
+                Este tiempo contigo ha sido lo mejor que me ha pasado, sin importar las cosas malas o los obstáculos que hemos enfrentado. De verdad, deseo con todo mi corazón que de ahora en adelante todo vaya mejor para nosotros, que sigamos priorizando nuestra felicidad sin importar lo que digan los demás. Tú y yo, juntos, siempre.
+                
+                Eres una mujer increíble, y muchas veces me dejas sin palabras. Como por ejemplo, cuando veo todo lo que haces por Lukas y el esfuerzo que pones en sus cosas. En esos momentos me doy cuenta de lo maravillosa que eres. A veces siento que no te das cuenta de lo grandiosa que eres, pero no importa, yo lo veo. Y créeme, te amo más cada día, y siempre trataré de demostrártelo.
+                
+                Quiero que sigas siendo esa mujer fuerte, decidida y valiente que me encanta, que luches por lo que quieres sin importar las dificultades. Ya sé que hay días en los que te sientes agobiada, sobre todo por los niños y por Alex (ya sabemos cómo es,jajajaj), pero también sé lo increíblemente paciente y amorosa que eres, y eso es algo que admiro muchísimo de ti.
+                
+                Puede que lo que te estoy escribiendo suene un poco enredado, pero son muchas cosas que quiero decirte, y a veces me cuesta expresarlo bien. Lo importante es que te amo muchísimo y estoy agradecido por cada momento que hemos compartido, por cada pequeño detalle y por todo lo que me has dado.
+                
+                Esta página la hice solo para ti, mi vida, para que entres cuando quieras y recuerdes todo el amor que siento por ti. Nunca dudes de eso, ni dejes que nadie te haga dudar. Eres todo para mí.
+                
+                Te amo muchísimo, y siempre lo haré. ❤️
+            </p>
+        </div>
+
+        <!-- Las mismas imágenes en la segunda página -->
         <img src="https://github.com/JULIANBONETT/feliz-cumple/blob/main/WhatsApp%20Image%202024-10-09%20at%201.37.44%20PM.jpeg?raw=true" alt="Foto 1" class="photo-ordered photo-1">
         <img src="https://github.com/JULIANBONETT/feliz-cumple/blob/main/WhatsApp%20Image%202024-10-09%20at%202.35.16%20PM.jpeg?raw=true" alt="Foto 2" class="photo-ordered photo-2">
         <img src="https://github.com/JULIANBONETT/feliz-cumple/blob/main/WhatsApp%20Image%202024-10-09%20at%201.38.27%20PM.jpeg?raw=true" alt="Foto 3" class="photo-ordered photo-3">
@@ -235,12 +254,15 @@
         <img src="https://github.com/JULIANBONETT/feliz-cumple/blob/main/WhatsApp%20Image%202024-10-09%20at%201.38.47%20PM.jpeg?raw=true" alt="Foto 5" class="photo-ordered photo-5">
         <img src="https://github.com/JULIANBONETT/feliz-cumple/blob/main/WhatsApp%20Image%202024-10-09%20at%202.13.19%20PM.jpeg?raw=true" alt="Foto 6" class="photo-ordered photo-6">
         
-        <footer>Con amor y felicidad, siempre a tu lado. 💖</footer>
+        <footer>
+            TE AMO 💖 <br>
+            <a href="https://www.youtube.com/watch?v=YJ84U_30GRM" target="_blank" style="color: #5312A8; font-weight: bold;">TE AMO MI VIDA FELIZ CUMPLE</a>
+        </footer>
     </div>
 
     <script>
+        // Función para cambiar a la segunda pantalla
         function showMessage() {
-            // Ocultar la primera página y mostrar la segunda
             document.getElementById('page1').classList.add('hidden');
             document.getElementById('page2').classList.remove('hidden');
         }
